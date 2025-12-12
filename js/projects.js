@@ -2,116 +2,125 @@
    projects.js
    Purpose:
    - Load projects from data/projects.json
-   - Render project cards automatically
-   - Provide search + filter for recruiter-friendly scanning
-   - Link to case study page: project.html?id=...
+   - Render recruiter-friendly project cards
+   - Provide search + filter
+   - Link to detailed case study page
    ========================================================= */
 
 (async function () {
   const grid = document.getElementById("projectGrid");
-  const q = document.getElementById("q");
+  const searchInput = document.getElementById("q");
   const filterButtons = document.querySelectorAll("[data-filter]");
+
   if (!grid) return;
 
-  // Load project data (JSON database)
+  // Load project data
   const res = await fetch("data/projects.json");
   const projects = await res.json();
 
   let activeFilter = "All";
   let query = "";
 
-  function matches(p) {
-    // Combine fields into one searchable string
-    const hay = [
-      p.title,
-      p.level,
-      (p.tags || []).join(" "),
-      (p.tech || []).join(" "),
-      p.problem,
-      p.solution
-    ].join(" ").toLowerCase();
+  // Check if project matches search + filter
+  function matches(project) {
+    const searchableText = [
+      project.title,
+      project.level,
+      project.summary,
+      project.situation,
+      project.task,
+      (project.action || []).join(" "),
+      project.result,
+      (project.tech || []).join(" "),
+      (project.tags || []).join(" ")
+    ]
+      .join(" ")
+      .toLowerCase();
 
-    const okQuery = hay.includes(query.toLowerCase());
-    const okFilter = activeFilter === "All" || hay.includes(activeFilter.toLowerCase());
-    return okQuery && okFilter;
+    const matchesQuery = searchableText.includes(query.toLowerCase());
+    const matchesFilter =
+      activeFilter === "All" ||
+      searchableText.includes(activeFilter.toLowerCase());
+
+    return matchesQuery && matchesFilter;
   }
 
-  function card(p) {
+  // Build one project card (STAR format)
+  function createCard(project) {
     return `
-      <article class="card" style="box-shadow:none;">
-        <h2 style="margin-bottom:8px;">${p.title}</h2>
+      <article class="card">
+        <h2>${project.title}</h2>
+        <p class="small">${project.summary}</p>
 
-        <p class="small"><strong>Problem:</strong> ${p.problem}</p>
-        <p class="small"><strong>Solution:</strong> ${p.solution}</p>
-        <p class="small"><strong>Tech:</strong> ${(p.tech || []).join(", ")}</p>
+        <p><strong>Situation:</strong> ${project.situation}</p>
+        <p><strong>Task:</strong> ${project.task}</p>
 
-        <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn primary" href="project.html?id=${encodeURIComponent(p.id)}">View Case Study</a>
-          <a class="btn" href="${p.github}" target="_blank" rel="noopener">GitHub</a>
+        <ul>
+          ${(project.action || [])
+            .map(item => `<li>${item}</li>`)
+            .join("")}
+        </ul>
+
+        <p><strong>Result:</strong> ${project.result}</p>
+
+        <p class="small">
+          <strong>Tech:</strong> ${(project.tech || []).join(", ")}
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="project.html?id=${encodeURIComponent(
+            project.id
+          )}">
+            View Case Study
+          </a>
+          <a
+            class="btn"
+            href="${project.github}"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
         </div>
 
-        <div style="margin-top:10px;">
-          ${(p.tags || []).map(t => `<span class="tag">${t}</span>`).join("")}
+        <div class="tags">
+          ${(project.tags || [])
+            .map(tag => `<span class="tag">${tag}</span>`)
+            .join("")}
         </div>
       </article>
     `;
   }
 
+  // Render projects
   function render() {
-    const list = projects.filter(matches);
-    grid.innerHTML = list.length
-      ? list.map(card).join("")
-      : `<div class="card"><p class="small">No projects match your search/filter.</p></div>`;
+    const visibleProjects = projects.filter(matches);
+
+    grid.innerHTML = visibleProjects.length
+      ? visibleProjects.map(createCard).join("")
+      : `
+        <div class="card">
+          <p class="small">No projects match your search or filter.</p>
+        </div>
+      `;
   }
 
   // Search input
-  q?.addEventListener("input", (e) => {
-    query = e.target.value || "";
-    render();
-  });
+  if (searchInput) {
+    searchInput.addEventListener("input", e => {
+      query = e.target.value || "";
+      render();
+    });
+  }
 
   // Filter buttons
-  filterButtons.forEach((btn) => {
+  filterButtons.forEach(btn => {
     btn.addEventListener("click", () => {
       activeFilter = btn.getAttribute("data-filter") || "All";
       render();
     });
   });
 
+  // Initial render
   render();
-})();
-(async function () {
-  const grid = document.getElementById("projectsGrid");
-  const search = document.getElementById("searchInput");
-
-  if (!grid) return;
-
-  const res = await fetch("data/projects.json");
-  const projects = await res.json();
-
-  function render(list) {
-    grid.innerHTML = list.map(p => `
-      <article class="card">
-        <h2>${p.title}</h2>
-        <p class="small">${p.summary}</p>
-        <p class="small"><strong>Tech:</strong> ${p.tech.join(", ")}</p>
-        <div class="actions">
-          <a class="btn primary" href="project.html?id=${p.id}">View Case Study</a>
-          <a class="btn" href="${p.github}" target="_blank">GitHub</a>
-        </div>
-      </article>
-    `).join("");
-  }
-
-  render(projects);
-
-  search.addEventListener("input", () => {
-    const q = search.value.toLowerCase();
-    render(
-      projects.filter(p =>
-        p.title.toLowerCase().includes(q) ||
-        p.tech.join(" ").toLowerCase().includes(q)
-      )
-    );
-  });
 })();

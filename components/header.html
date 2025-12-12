@@ -16,10 +16,21 @@
     </nav>
 
     <div style="display:flex; gap:10px; align-items:center;">
-      <button class="theme-btn" type="button" data-theme-toggle aria-pressed="false">
+      <button
+        class="theme-btn"
+        type="button"
+        data-theme-toggle
+        aria-pressed="false"
+      >
         Dark mode: Off
       </button>
-      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false">
+
+      <button
+        class="menu-btn"
+        type="button"
+        data-menu-toggle
+        aria-expanded="false"
+      >
         Menu
       </button>
     </div>
@@ -28,18 +39,46 @@
   <!-- Recruiter-friendly quick actions -->
   <div class="container" style="padding-bottom:12px;">
     <div class="quickbar" role="region" aria-label="Quick actions">
-      <a
-  class="btn"
-  href="assets/cv/cv.pdf"
-  target="_blank"
-  rel="noopener"
->
-  Download CV
-</a>
 
-      <a class="quicklink" id="emailLink" href="mailto:hemhsp91@gmail.com">Email</a>
-      <a class="quicklink" id="githubLink" href="https://github.com/hemarajm" target="_blank" rel="noopener">GitHub</a>
-      <a class="quicklink" id="linkedinLink" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      <!-- Download CV -->
+      <a
+        class="btn primary"
+        href="assets/cv/cv.pdf"
+        target="_blank"
+        rel="noopener"
+        aria-label="Download CV as PDF"
+      >
+        Download CV
+      </a>
+
+      <!-- Email -->
+      <a
+        class="quicklink"
+        href="mailto:hemhsp91@gmail.com?subject=Portfolio%20Contact"
+      >
+        Email
+      </a>
+
+      <!-- GitHub -->
+      <a
+        class="quicklink"
+        href="https://github.com/Hemkiyo"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        class="quicklink"
+        href="https://www.linkedin.com/feed/"
+        target="_blank"
+        rel="noopener"
+      >
+        LinkedIn
+      </a>
+
     </div>
   </div>
 </header>

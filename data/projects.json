@@ -2,49 +2,67 @@
   {
     "id": "python-budget-tracker",
     "title": "Python: Personal Budget Tracker (CLI)",
-    "summary": "A CLI app to record expenses, summarise totals by category, and export clean CSV for review.",
     "level": "Beginner",
     "tags": ["Python", "CLI", "CSV"],
-    "problem": "Track daily expenses quickly without complex apps.",
-    "solution": "A command-line tool to add expenses, summarise totals by category, and export data to CSV for review.",
+    "summary": "A command-line tool to record expenses, categorise spending, and export data for review.",
+    "situation": "Managing daily expenses without structure makes it difficult to track spending patterns.",
+    "task": "Create a simple, reliable tool to record expenses quickly and store them in a reusable format.",
+    "action": [
+      "Designed a command-line interface for fast data entry",
+      "Implemented input validation to prevent incorrect data",
+      "Stored records in CSV format for easy analysis later"
+    ],
+    "result": "The tool allows consistent expense tracking and produces clean data that can be analysed or visualised later.",
+    "learnings": [
+      "How to structure a Python program using small, reusable functions",
+      "Why validating user input is critical even in simple programs",
+      "How CSV files can act as a lightweight data storage format"
+    ],
     "tech": ["Python", "CSV", "Functions", "Input validation"],
-    "github": "#",
-    "highlights": [
-      "Validates inputs and handles edge cases",
-      "Exports structured CSV for future visualisation",
-      "Clean function-based design"
-    ]
+    "github": "#"
   },
   {
     "id": "java-grade-calculator",
     "title": "Java: Student Grade Calculator",
-    "summary": "A Java console program that validates marks, calculates averages, and outputs grade categories.",
     "level": "Beginner",
-    "tags": ["Java", "Fundamentals", "Validation"],
-    "problem": "Convert raw marks into grade outcomes consistently.",
-    "solution": "Console app that accepts marks, validates input, calculates average, and prints grade category.",
+    "tags": ["Java", "Fundamentals", "OOP"],
+    "summary": "A console application that calculates grades from marks using clear validation and control flow.",
+    "situation": "Manual grade calculation can be inconsistent and error-prone.",
+    "task": "Build a Java program that reliably converts marks into grade categories.",
+    "action": [
+      "Used loops and conditionals to process multiple inputs",
+      "Applied input validation to handle incorrect values",
+      "Structured logic into clear, readable methods"
+    ],
+    "result": "The program produces consistent results and can be easily extended for multiple students.",
+    "learnings": [
+      "How Java control flow differs from Python",
+      "Why method structure improves readability and maintenance",
+      "How to think in terms of logic flow before writing code"
+    ],
     "tech": ["Java", "Loops", "Conditionals", "Methods"],
-    "github": "#",
-    "highlights": [
-      "Robust input validation",
-      "Clear control flow and readable output",
-      "Easy to extend for multiple students"
-    ]
+    "github": "#"
   },
   {
     "id": "file-organiser",
     "title": "Automation: Downloads Folder File Organiser",
-    "summary": "A safe automation script that organises downloads by file type with a dry-run mode and logging.",
     "level": "Beginner",
     "tags": ["Python", "Automation", "OS"],
-    "problem": "Downloads folder becomes messy and hard to search.",
-    "solution": "Script that sorts files into folders by type with a safe dry-run mode before moving anything.",
+    "summary": "A Python automation script that organises files by type with safety checks.",
+    "situation": "Downloads folders quickly become cluttered and hard to manage.",
+    "task": "Automate file organisation while avoiding accidental data loss.",
+    "action": [
+      "Scanned files using pathlib and OS utilities",
+      "Implemented a dry-run mode before moving files",
+      "Added logging for traceability and debugging"
+    ],
+    "result": "The script keeps folders organised safely and can be reused or extended easily.",
+    "learnings": [
+      "How automation scripts can save time in everyday workflows",
+      "Why safety checks are important when working with file systems",
+      "How logging helps debug and trust automation code"
+    ],
     "tech": ["Python", "os/pathlib", "Logging"],
-    "github": "#",
-    "highlights": [
-      "Dry-run mode for safety",
-      "Logging for auditability",
-      "Modular rules for new file types"
-    ]
+    "github": "#"
   }
 ]

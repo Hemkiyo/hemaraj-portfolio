@@ -95,10 +95,18 @@
         </article>
 
         <article class="card" style="margin-top:16px;">
-          <h2>Tech Used</h2>
-          <p class="small">${(project.tech || []).join(", ")}</p>
-        </article>
-      </div>
-    </section>
+  <h2>Result</h2>
+  <p>${project.result || "—"}</p>
+</article>
+
+<article class="card" style="margin-top:16px;">
+  <h2>What I Learned</h2>
+  <ul>
+    ${(project.learnings || [])
+      .map(l => `<li>${l}</li>`)
+      .join("")}
+  </ul>
+</article>
+
   `;
 })();

@@ -64,5 +64,30 @@
     ],
     "tech": ["Python", "os/pathlib", "Logging"],
     "github": "#"
-  }
+  },
+  {
+  "id": "python-budget-tracker",
+  "title": "Python Budget Tracker (CLI)",
+  "level": "Beginner",
+  "summary": "A command-line application to track expenses and export them to CSV.",
+  "problem": "Manually tracking expenses is error-prone and unstructured.",
+  "solution": "Built a Python CLI tool to record expenses, validate input, and save data to CSV.",
+  "tech": ["Python", "CSV", "CLI"],
+  "tags": ["Python", "Automation", "Beginner"],
+  "github": "https://github.com/Hemkiyo/hemaraj-portfolio/tree/main/repos/python-budget-tracker-cli",
+  "situation": "Needed a simple real-world project to practice Python fundamentals.",
+  "task": "Create a usable CLI program with file handling and input validation.",
+  "action": [
+    "Designed a menu-driven CLI",
+    "Validated numeric and text inputs",
+    "Stored expenses in CSV format"
+  ],
+  "result": "Successfully records expenses and exports structured data.",
+  "learnings": [
+    "Working with files in Python",
+    "Using CSV writer correctly",
+    "Designing simple CLI flows"
+  ]
+}
+
 ]

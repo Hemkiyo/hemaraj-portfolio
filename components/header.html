@@ -43,7 +43,7 @@
   <div class="container" style="padding-bottom:12px;">
     <div class="quickbar" role="region" aria-label="Quick actions">
 
-      <!-- Download CV (static, correct as-is) -->
+      <!-- Download CV -->
       <a
         class="btn primary"
         href="assets/cv/cv.pdf"
@@ -54,25 +54,33 @@
         Download CV
       </a>
 
-      <!-- These links are now data-driven via js/main.js -->
-      <a class="quicklink" id="emailLink" href="#">
-        Email
-      </a>
+      <!-- Email (FIXED: no #, works immediately) -->
+      <button
+  class="quicklink"
+  id="emailLink"
+  type="button"
+  aria-label="Copy email address"
+>
+  Email
+</button>
 
+
+      <!-- GitHub -->
       <a
         class="quicklink"
         id="githubLink"
-        href="#"
+        href="https://github.com/Hemkiyo"
         target="_blank"
         rel="noopener"
       >
         GitHub
       </a>
 
+      <!-- LinkedIn -->
       <a
         class="quicklink"
         id="linkedinLink"
-        href="#"
+        href="https://www.linkedin.com/feed/"
         target="_blank"
         rel="noopener"
       >

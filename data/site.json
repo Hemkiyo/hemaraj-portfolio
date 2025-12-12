@@ -1,12 +1,9 @@
 {
   "name": "Hemaraj Muthalagan",
-  "location": "Leicester, United Kingdom",
-  "phone": "+44 7818 190642",
+  "location": "United Kingdom",
   "email": "hemhsp91@gmail.com",
-  "github": "https://github.com/hemarajm",
-  "linkedin": "https://www.linkedin.com/in/YOUR-LINKEDIN",
-  "headline": "MSc Computer Science (UK) student building toward AI/ML, Cloud, and Cybersecurity.",
-  "summary": "I’m transitioning into tech with a disciplined, fundamentals-first approach. I build small projects, document learning, and improve step by step—focused on employability and reliable delivery.",
-  "cvPath": "assets/cv.pdf",
-  "canonicalBase": "https://YOUR_DOMAIN_HERE"
+  "phone": "+44 7818 190642",
+  "github": "https://github.com/Hemkiyo",
+  "linkedin": "https://www.linkedin.com/feed/",
+  "portfolio": "https://hemkiyo.github.io/hemaraj-portfolio/"
 }

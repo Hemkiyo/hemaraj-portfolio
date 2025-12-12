@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Hemaraj Muthalagan</title>
+  <meta name="description" content="Projects by Hemaraj Muthalagan: recruiter-friendly case studies with clear problem, solution, tech used, and next steps." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header injected by layout.js -->
+  <div data-header></div>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Projects</div>
+        <h1>Projects that prove fundamentals and improve over time.</h1>
+        <p class="small">
+          Search and filter projects. Click a project to view the full case study.
+        </p>
+      </div>
+
+      <section class="section">
+        <div class="container" style="padding:0;">
+          <div class="card">
+            <label class="visually-hidden" for="q">Search projects</label>
+            <input
+              id="q"
+              type="search"
+              placeholder="Search by title, tech, or tags…"
+              style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:var(--bg); color:var(--text);"
+            />
+
+            <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+              <button class="btn" type="button" data-filter="All">All</button>
+              <button class="btn" type="button" data-filter="Python">Python</button>
+              <button class="btn" type="button" data-filter="Java">Java</button>
+              <button class="btn" type="button" data-filter="Automation">Automation</button>
+            </div>
+
+            <div id="projectGrid" class="grid-3" style="margin-top:14px;"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer injected by layout.js -->
+  <div data-footer></div>
+
+  <!-- IMPORTANT: layout.js must run before main.js -->
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project | Hemaraj Muthalagan</title>
+  <meta name="description" content="Project case study by Hemaraj Muthalagan." />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header injected by layout.js -->
+  <div data-header></div>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div id="projectDetail"></div>
+    </div>
+  </main>
+
+  <!-- Footer injected by layout.js -->
+  <div data-footer></div>
+
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/project-detail.js"></script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project | Hemaraj Muthalagan</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Project case study by Hemaraj Muthalagan." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <div data-header></div>
+
+  <main id="main" class="section">
+    <div class="container">
+      <!-- This will be filled dynamically -->
+      <div id="projectDetail"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div data-footer></div>
+
+  <script src="js/layout.js"></script>
+  <script src="js/project-details.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

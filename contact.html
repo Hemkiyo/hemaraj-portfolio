@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Hemaraj Muthalagan</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Contact Hemaraj Muthalagan — MSc Computer Science student in the UK, open to graduate roles, junior developer roles, internships, and freelance work." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header injected by layout.js -->
+  <div data-header></div>
+
+  <main id="main" class="section">
+    <div class="container">
+      <div class="card">
+        <div class="kicker">Contact</div>
+        <h1>Let’s connect.</h1>
+        <p class="small">
+          I’m open to graduate roles, junior developer opportunities, internships, and freelance projects.
+          The best way to reach me is by email or LinkedIn.
+        </p>
+      </div>
+
+      <section class="section">
+        <div class="container" style="padding:0;">
+          <div class="grid-2">
+
+            <!-- Contact details (dynamic: filled from data/site.json by layout.js) -->
+            <article class="card">
+              <h2>Contact details</h2>
+              <ul class="list">
+                <li>
+                  <strong>Email:</strong>
+                  <a id="contactEmail" href="#">Loading…</a>
+                </li>
+                <li>
+                  <strong>LinkedIn:</strong>
+                  <a id="contactLinkedIn" href="#" target="_blank" rel="noopener">Loading…</a>
+                </li>
+                <li>
+                  <strong>GitHub:</strong>
+                  <a id="contactGitHub" href="#" target="_blank" rel="noopener">Loading…</a>
+                </li>
+                <li>
+                  <strong>Location:</strong> United Kingdom
+                </li>
+              </ul>
+
+              <p class="small" style="margin-top:10px;">
+                These links are loaded from <strong>data/site.json</strong>. Update that file once and the whole website updates.
+              </p>
+            </article>
+
+            <!-- Contact form (frontend only for now) -->
+            <article class="card">
+              <h2>Send a message</h2>
+
+              <form id="contactForm">
+                <label class="small">
+                  Name
+                  <input id="name" type="text" placeholder="Your name" autocomplete="name" required />
+                </label>
+
+                <label class="small">
+                  Email
+                  <input id="email" type="email" placeholder="Your email" autocomplete="email" required />
+                </label>
+
+                <label class="small">
+                  Message
+                  <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+                </label>
+
+                <button class="btn primary" type="submit">
+                  Create Email Draft
+                </button>
+              </form>
+
+              <p class="small" style="margin-top:10px;">
+                This form does not send anything yet. It creates an email draft using your default mail app.
+                We can connect a real backend later (Netlify Forms / Formspree / custom API).
+              </p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <div class="actions">
+        <a class="btn primary" href="projects.html">View Projects</a>
+        <a class="btn" href="about.html">About</a>
+        <a class="btn" href="index.html">Home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer injected by layout.js -->
+  <div data-footer></div>
+
+  <script src="js/layout.js"></script>
+
+  <!-- Small page-only script: turns the form into a mailto draft -->
+  <script>
+    (function () {
+      const form = document.getElementById("contactForm");
+      if (!form) return;
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        // Create a clean, recruiter-friendly email draft
+        const subject = encodeURIComponent(`Portfolio enquiry — ${name}`);
+        const body = encodeURIComponent(
+`Hello Hemaraj,
+
+My name is ${name}. You can reach me at ${email}.
+
+Message:
+${message}
+
+Kind regards,
+${name}`
+        );
+
+        // Use the email stored in the header quick action (set by layout.js),
+        // fallback to a placeholder if not loaded yet.
+        const targetEmail = (document.getElementById("emailLink")?.href || "mailto:your.email@example.com").replace("mailto:", "");
+
+        window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+      });
+    })();
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

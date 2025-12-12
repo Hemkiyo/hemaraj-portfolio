@@ -1,0 +1,50 @@
+[
+  {
+    "id": "python-budget-tracker",
+    "title": "Python: Personal Budget Tracker (CLI)",
+    "summary": "A CLI app to record expenses, summarise totals by category, and export clean CSV for review.",
+    "level": "Beginner",
+    "tags": ["Python", "CLI", "CSV"],
+    "problem": "Track daily expenses quickly without complex apps.",
+    "solution": "A command-line tool to add expenses, summarise totals by category, and export data to CSV for review.",
+    "tech": ["Python", "CSV", "Functions", "Input validation"],
+    "github": "#",
+    "highlights": [
+      "Validates inputs and handles edge cases",
+      "Exports structured CSV for future visualisation",
+      "Clean function-based design"
+    ]
+  },
+  {
+    "id": "java-grade-calculator",
+    "title": "Java: Student Grade Calculator",
+    "summary": "A Java console program that validates marks, calculates averages, and outputs grade categories.",
+    "level": "Beginner",
+    "tags": ["Java", "Fundamentals", "Validation"],
+    "problem": "Convert raw marks into grade outcomes consistently.",
+    "solution": "Console app that accepts marks, validates input, calculates average, and prints grade category.",
+    "tech": ["Java", "Loops", "Conditionals", "Methods"],
+    "github": "#",
+    "highlights": [
+      "Robust input validation",
+      "Clear control flow and readable output",
+      "Easy to extend for multiple students"
+    ]
+  },
+  {
+    "id": "file-organiser",
+    "title": "Automation: Downloads Folder File Organiser",
+    "summary": "A safe automation script that organises downloads by file type with a dry-run mode and logging.",
+    "level": "Beginner",
+    "tags": ["Python", "Automation", "OS"],
+    "problem": "Downloads folder becomes messy and hard to search.",
+    "solution": "Script that sorts files into folders by type with a safe dry-run mode before moving anything.",
+    "tech": ["Python", "os/pathlib", "Logging"],
+    "github": "#",
+    "highlights": [
+      "Dry-run mode for safety",
+      "Logging for auditability",
+      "Modular rules for new file types"
+    ]
+  }
+]

@@ -8,7 +8,7 @@
     "situation": "Managing daily expenses without structure makes it difficult to track spending patterns.",
     "task": "Create a simple, reliable tool to record expenses quickly and store them in a reusable format.",
     "action": [
-      "Designed a command-line interface for fast data entry",
+      "Designed a menu-driven CLI for fast data entry",
       "Implemented input validation to prevent incorrect data",
       "Stored records in CSV format for easy analysis later"
     ],
@@ -19,13 +19,13 @@
       "How CSV files can act as a lightweight data storage format"
     ],
     "tech": ["Python", "CSV", "Functions", "Input validation"],
-    "github": "#"
+    "github": "https://github.com/Hemkiyo/hemaraj-portfolio/tree/main/repos/python-budget-tracker-cli"
   },
   {
     "id": "java-grade-calculator",
     "title": "Java: Student Grade Calculator",
     "level": "Beginner",
-    "tags": ["Java", "Fundamentals", "OOP"],
+    "tags": ["Java", "CLI", "Fundamentals"],
     "summary": "A console application that calculates grades from marks using clear validation and control flow.",
     "situation": "Manual grade calculation can be inconsistent and error-prone.",
     "task": "Build a Java program that reliably converts marks into grade categories.",
@@ -34,14 +34,14 @@
       "Applied input validation to handle incorrect values",
       "Structured logic into clear, readable methods"
     ],
-    "result": "The program produces consistent results and can be easily extended for multiple students.",
+    "result": "The program produces consistent results and can be extended for multiple students.",
     "learnings": [
       "How Java control flow differs from Python",
       "Why method structure improves readability and maintenance",
       "How to think in terms of logic flow before writing code"
     ],
     "tech": ["Java", "Loops", "Conditionals", "Methods"],
-    "github": "#"
+    "github": "https://github.com/Hemkiyo/hemaraj-portfolio/tree/main/repos/java-grade-calculator"
   },
   {
     "id": "file-organiser",
@@ -63,31 +63,6 @@
       "How logging helps debug and trust automation code"
     ],
     "tech": ["Python", "os/pathlib", "Logging"],
-    "github": "#"
-  },
-  {
-  "id": "python-budget-tracker",
-  "title": "Python Budget Tracker (CLI)",
-  "level": "Beginner",
-  "summary": "A command-line application to track expenses and export them to CSV.",
-  "problem": "Manually tracking expenses is error-prone and unstructured.",
-  "solution": "Built a Python CLI tool to record expenses, validate input, and save data to CSV.",
-  "tech": ["Python", "CSV", "CLI"],
-  "tags": ["Python", "Automation", "Beginner"],
-  "github": "https://github.com/Hemkiyo/hemaraj-portfolio/tree/main/repos/python-budget-tracker-cli",
-  "situation": "Needed a simple real-world project to practice Python fundamentals.",
-  "task": "Create a usable CLI program with file handling and input validation.",
-  "action": [
-    "Designed a menu-driven CLI",
-    "Validated numeric and text inputs",
-    "Stored expenses in CSV format"
-  ],
-  "result": "Successfully records expenses and exports structured data.",
-  "learnings": [
-    "Working with files in Python",
-    "Using CSV writer correctly",
-    "Designing simple CLI flows"
-  ]
-}
-
+    "github": "https://github.com/Hemkiyo/hemaraj-portfolio/tree/main/repos/downloads-file-organiser"
+  }
 ]

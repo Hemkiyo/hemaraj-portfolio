@@ -1,29 +1,46 @@
 
-Delete everything and paste:
 
 ```md
 # Java Student Grade Calculator
 
-A simple console application that calculates student grades from marks using clear control flow and validation.
+A beginner-level Java console application that converts numeric marks into grade categories using clear control flow.
+
+---
 
 ## Why this project exists
-I built this project to practise Java fundamentals such as loops, conditionals, and method structure.
 
-## Features
-- Accepts marks safely
+Manually calculating grades can lead to mistakes and inconsistent results.  
+This project was built to practice Java fundamentals and logical thinking.
+
+---
+
+## What the program does
+
+- Accepts marks from the user
 - Validates input values
-- Calculates average score
-- Outputs grade category
+- Calculates grade categories
+- Displays clear results in the console
 
-## Tech used
-- Java
+---
+
+## Concepts used
+
 - Loops
-- Conditionals
+- Conditional statements
 - Methods
+- Input validation
 
-## How to run (local)
-1. Install Java (JDK 17 recommended)
-2. Compile:
+---
 
-```bash
-javac Main.java
+## What I learned
+
+- How Java control flow differs from Python
+- Why breaking logic into methods improves readability
+- How to think through logic before writing code
+
+---
+
+## How to run (planned)
+
+This project is designed as a console application.  
+(Java execution setup will be added as part of future improvements.)

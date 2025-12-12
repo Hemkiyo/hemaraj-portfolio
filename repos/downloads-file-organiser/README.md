@@ -1,41 +1,20 @@
-# Downloads Folder File Organiser
+# Downloads Folder File Organiser (Python)
 
-A Python automation script that organises files into folders based on file type, with safety checks.
+A beginner-friendly Python automation script that organises the Downloads folder by file type.
 
----
+## Problem
+Downloads folders become cluttered quickly, making files hard to find.
 
-## Why this project exists
+## Solution
+This script scans the Downloads folder and moves files into category folders like:
+- Documents, Images, Spreadsheets, Archives, Scripts, Others
 
-Download folders quickly become cluttered and difficult to manage.  
-This project explores automation for everyday productivity tasks.
+## Safety
+- No deletion
+- Uses a DRY_RUN option to preview actions
 
----
+## How to run (Windows)
+Open terminal in this folder and run:
 
-## What the script does
-
-- Scans files in a target folder
-- Groups files by extension
-- Supports a dry-run mode before moving files
-- Logs actions for traceability
-
----
-
-## Technologies used
-
-- Python
-- pathlib / os
-- Logging
-
----
-
-## What I learned
-
-- How automation can save time in daily workflows
-- Why safety checks are critical when moving files
-- How logging improves trust and debugging
-
----
-
-## How to run (planned)
-
-Execution instructions will be added once the script is finalised.
+```bash
+python main.py

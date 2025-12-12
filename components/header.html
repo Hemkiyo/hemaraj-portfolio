@@ -1,10 +1,12 @@
 <header class="site-header">
   <div class="container nav">
+    <!-- Brand -->
     <a class="brand" href="index.html" aria-label="Go to home">
       <strong id="siteName">Hemaraj Muthalagan</strong>
       <span>Portfolio</span>
     </a>
 
+    <!-- Navigation -->
     <nav class="nav-links" data-nav-links aria-label="Primary navigation">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -15,6 +17,7 @@
       <a href="contact.html">Contact</a>
     </nav>
 
+    <!-- Controls -->
     <div style="display:flex; gap:10px; align-items:center;">
       <button
         class="theme-btn"
@@ -40,7 +43,7 @@
   <div class="container" style="padding-bottom:12px;">
     <div class="quickbar" role="region" aria-label="Quick actions">
 
-      <!-- Download CV -->
+      <!-- Download CV (static, correct as-is) -->
       <a
         class="btn primary"
         href="assets/cv/cv.pdf"
@@ -51,28 +54,25 @@
         Download CV
       </a>
 
-      <!-- Email -->
-      <a
-        class="quicklink"
-        href="mailto:hemhsp91@gmail.com?subject=Portfolio%20Contact"
-      >
+      <!-- These links are now data-driven via js/main.js -->
+      <a class="quicklink" id="emailLink" href="#">
         Email
       </a>
 
-      <!-- GitHub -->
       <a
         class="quicklink"
-        href="https://github.com/Hemkiyo"
+        id="githubLink"
+        href="#"
         target="_blank"
         rel="noopener"
       >
         GitHub
       </a>
 
-      <!-- LinkedIn -->
       <a
         class="quicklink"
-        href="https://www.linkedin.com/feed/"
+        id="linkedinLink"
+        href="#"
         target="_blank"
         rel="noopener"
       >

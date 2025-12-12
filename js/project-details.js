@@ -3,7 +3,7 @@
    Purpose:
    - Read project id from URL: project.html?id=...
    - Load data from data/projects.json
-   - Render a recruiter-friendly STAR case study
+   - Render a recruiter-friendly STAR case study + Learnings
    ========================================================= */
 
 (async function () {
@@ -40,9 +40,7 @@
     root.innerHTML = `
       <div class="card">
         <h1>Project not found</h1>
-        <p class="small">
-          The link may be incorrect, or the project id is missing.
-        </p>
+        <p class="small">The link may be incorrect, or the project id is missing.</p>
         <div class="actions">
           <a class="btn primary" href="projects.html">Back to Projects</a>
         </div>
@@ -51,10 +49,11 @@
     return;
   }
 
-  // 4) Render STAR case study
+  // 4) Render STAR case study + Learnings
   root.innerHTML = `
     <section class="section">
       <div class="container">
+
         <div class="card">
           <div class="kicker">Case Study</div>
           <h1>${project.title}</h1>
@@ -95,18 +94,18 @@
         </article>
 
         <article class="card" style="margin-top:16px;">
-  <h2>Result</h2>
-  <p>${project.result || "—"}</p>
-</article>
+          <h2>What I Learned</h2>
+          <ul>
+            ${(project.learnings || []).map(l => `<li>${l}</li>`).join("")}
+          </ul>
+        </article>
 
-<article class="card" style="margin-top:16px;">
-  <h2>What I Learned</h2>
-  <ul>
-    ${(project.learnings || [])
-      .map(l => `<li>${l}</li>`)
-      .join("")}
-  </ul>
-</article>
+        <article class="card" style="margin-top:16px;">
+          <h2>Tech Used</h2>
+          <p class="small">${(project.tech || []).join(", ")}</p>
+        </article>
 
+      </div>
+    </section>
   `;
 })();

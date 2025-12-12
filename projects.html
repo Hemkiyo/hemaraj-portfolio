@@ -4,56 +4,56 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects | Hemaraj Muthalagan</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Software projects by Hemaraj Muthalagan — beginner to intermediate projects in Python, Java, and automation." />
+  <meta name="description" content="Projects by Hemaraj Muthalagan: recruiter-friendly case studies with clear situation, task, actions, and results." />
   <meta name="robots" content="index, follow" />
-
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header -->
+  <!-- Header injected by layout.js -->
   <div data-header></div>
 
   <main id="main" class="section">
     <div class="container">
       <div class="card">
         <div class="kicker">Projects</div>
-        <h1>Practical projects that demonstrate learning and delivery.</h1>
+        <h1>Projects that prove fundamentals and improve over time.</h1>
         <p class="small">
-          Each project focuses on problem-solving, clean structure, and honest representation of skill level.
+          Search and filter projects. Click a project to view the full case study.
         </p>
       </div>
 
-      <!-- Search -->
-      <div class="card" style="margin-top:20px;">
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Search projects by name or technology..."
-          aria-label="Search projects"
-          style="width:100%; padding:12px; font-size:16px;"
-        />
-      </div>
-
-      <!-- Projects Grid -->
       <section class="section">
         <div class="container" style="padding:0;">
-          <div id="projectsGrid" class="grid-3"></div>
+          <div class="card">
+            <label class="visually-hidden" for="q">Search projects</label>
+            <input
+              id="q"
+              type="search"
+              placeholder="Search by title, tech, or tags…"
+              style="width:100%; padding:12px; border-radius:12px; border:1px solid var(--border); background:var(--bg); color:var(--text);"
+            />
+
+            <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+              <button class="btn" type="button" data-filter="All">All</button>
+              <button class="btn" type="button" data-filter="Python">Python</button>
+              <button class="btn" type="button" data-filter="Java">Java</button>
+              <button class="btn" type="button" data-filter="Automation">Automation</button>
+            </div>
+
+            <div id="projectGrid" class="grid-3" style="margin-top:14px;"></div>
+          </div>
         </div>
       </section>
     </div>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer injected by layout.js -->
   <div data-footer></div>
 
-  <!-- Scripts -->
   <script src="js/layout.js"></script>
-  <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 </html>
